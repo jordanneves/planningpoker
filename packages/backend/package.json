@@ -2,11 +2,11 @@
   "name": "@planning-poker/backend",
   "version": "1.0.0",
   "private": true,
-  "main": "dist/backend/src/index.js",
+  "main":  "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/backend/src/index.js"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@planning-poker/shared": "1.0.0",
