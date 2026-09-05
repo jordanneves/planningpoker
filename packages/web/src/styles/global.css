@@ -1,0 +1,107 @@
+:root {
+  --felt-900: #0f2f29;
+  --felt-800: #143a33;
+  --felt-700: #1c4d43;
+  --felt-600: #26645736;
+  --brass-500: #c99a44;
+  --brass-400: #ddb567;
+  --paper-100: #f2f6f1;
+  --paper-200: #e4ebe2;
+  --ink-900: #10201b;
+  --ink-on-felt: #eaf2ec;
+  --ink-muted: #9db6ac;
+  --danger-500: #c1553d;
+  --success-500: #4f9d6e;
+
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, sans-serif;
+
+  --radius-card: 14px;
+  --radius-sm: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% -10%, var(--felt-700), var(--felt-900) 60%);
+  color: var(--ink-on-felt);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font-display); margin: 0; letter-spacing: -0.01em; }
+
+button { font-family: var(--font-body); cursor: pointer; }
+
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--brass-400);
+  outline-offset: 2px;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  background: var(--paper-100);
+  color: var(--ink-900);
+  border: 1px solid var(--paper-200);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--brass-500); color: var(--ink-900); }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost { background: transparent; color: var(--ink-on-felt); border: 1px solid var(--felt-600); }
+.btn-ghost:hover { background: var(--felt-700); }
+.btn-danger { background: transparent; color: var(--danger-500); border: 1px solid var(--danger-500); }
+
+.card-surface { background: var(--felt-800); border: 1px solid var(--felt-700); border-radius: var(--radius-card); }
+
+.poker-card {
+  position: relative;
+  width: 74px;
+  height: 104px;
+  background: var(--paper-100);
+  color: var(--ink-900);
+  border-radius: var(--radius-card);
+  border: 2px solid var(--paper-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.poker-card::before, .poker-card::after {
+  content: attr(data-value);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.55;
+}
+.poker-card::before { top: 8px; left: 9px; }
+.poker-card::after { bottom: 8px; right: 9px; transform: rotate(180deg); }
+.poker-card:hover { transform: translateY(-6px); }
+.poker-card.selected {
+  border-color: var(--brass-500);
+  box-shadow: 0 8px 24px rgba(201, 154, 68, 0.35);
+  transform: translateY(-10px);
+}
+.poker-card:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+.poker-card-back {
+  background: linear-gradient(135deg, var(--felt-700), var(--felt-900));
+  border: 2px solid var(--brass-500);
+}

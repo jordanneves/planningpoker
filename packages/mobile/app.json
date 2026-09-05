@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Planning Poker",
+    "slug": "planning-poker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": { "backgroundColor": "#0f2f29" },
+    "android": { "package": "com.planningpoker.app" },
+    "ios": { "bundleIdentifier": "com.planningpoker.app" },
+    "web": { "bundler": "metro" }
+  }
+}
