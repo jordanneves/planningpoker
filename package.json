@@ -1,0 +1,19 @@
+{
+  "name": "planning-poker",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/shared",
+    "packages/backend",
+    "packages/web",
+    "packages/mobile"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev -w packages/backend",
+    "dev:web": "npm run dev -w packages/web",
+    "dev:mobile": "npm run start -w packages/mobile",
+    "build:shared": "npm run build -w packages/shared",
+    "build:web": "npm run build -w packages/web",
+    "build:backend": "npm run build -w packages/backend"
+  }
+}
