@@ -1,3 +1,3 @@
-export * from "./types";
-export * from "./votingScales";
-export * from "./socketEvents";
+export * from "./types.js";
+export * from "./votingScales.js";
+export * from "./socketEvents.js";

@@ -1,4 +1,4 @@
-import { VotingScaleKey } from "./types";
+import { VotingScaleKey } from "./types.js";
 
 export interface VotingScaleDefinition {
   key: VotingScaleKey;

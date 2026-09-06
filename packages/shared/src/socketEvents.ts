@@ -1,4 +1,4 @@
-import { Role, Room, Task, VoteStats, VotingScaleKey } from "./types";
+import { Role, Room, Task, VoteStats, VotingScaleKey } from "./types.js";
 
 export const SOCKET_EVENTS = {
   CREATE_ROOM: "room:create",
